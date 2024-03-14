@@ -1,31 +1,9 @@
 import {FC} from 'react'
-
 import pointerWhite from '@/assets/images/pointer.png'
 import pointer from '@/assets/images/pointerWhite.png'
-import {
-    ButtonContainer,
-    ButtonContentWrapper,
-    ContentContainer,
-    Count,
-    CountAdaptive,
-    CountContainerAdaptive,
-    Counter,
-    FreeConsultationButton,
-    FreeConsultationPointer,
-    FreeConsultationText,
-    SignUpContainer,
-    SignUpPointer,
-    SignUpText,
-    Text,
-    TextCount,
-    TextSpan,
-    Title,
-} from '@/components/Content/Content.style'
+import * as SC from './Content.style'
 import CurrencyConverter from '@/components/CurrencyConverter/CurrencyConverter'
-
-interface ContentProps {
-    open: () => void
-}
+import {ContentProps} from "@/components/Content/Content.type";
 
 const Content: FC<ContentProps> = ({open}) => {
     const currentDate = new Date()
@@ -40,62 +18,62 @@ const Content: FC<ContentProps> = ({open}) => {
     }, 0)
 
     return (
-        <ContentContainer>
-            <Title>Создаю условия для вашего успеха</Title>
-            <Text>
-                <TextSpan>
+        <SC.ContentContainer>
+            <SC.Title>Создаю условия для вашего успеха</SC.Title>
+            <SC.Text>
+                <SC.TextSpan>
                     Когда ваше время и энергия лучше сфокусированы, стремление к новым возможностям становится
                     реальностью,
-                </TextSpan>
+                </SC.TextSpan>
                 <span>ваш успех зависит от ваших действий</span>
-            </Text>
-            <ButtonContainer>
-                <ButtonContentWrapper>
-                    <SignUpContainer onClick={open}>
-                        <SignUpText>
+            </SC.Text>
+            <SC.ButtonContainer>
+                <SC.ButtonContentWrapper>
+                    <SC.SignUpContainer onClick={open}>
+                        <SC.SignUpText>
                             Записаться
                             <span> на консультацию</span>
-                        </SignUpText>
-                        <SignUpPointer alt={'pointer'} src={pointerWhite}/>
-                    </SignUpContainer>
-                    <Count>
-                        <Counter>{result}+</Counter>
-                        <TextCount>
+                        </SC.SignUpText>
+                        <SC.SignUpPointer alt={'pointer'} src={pointerWhite}/>
+                    </SC.SignUpContainer>
+                    <SC.Count>
+                        <SC.Counter>{result}+</SC.Counter>
+                        <SC.TextCount>
                             техник для <br/> достижения целей
-                        </TextCount>
-                    </Count>
-                </ButtonContentWrapper>
-                <ButtonContentWrapper>
-                    <FreeConsultationButton onClick={open}>
-                        <FreeConsultationText>
+                        </SC.TextCount>
+                    </SC.Count>
+                </SC.ButtonContentWrapper>
+                <SC.ButtonContentWrapper>
+                    <SC.FreeConsultationButton onClick={open}>
+                        <SC.FreeConsultationText>
                             <span>Бесплатная консультация</span>
                             <span>Заказать звонок</span>
-                        </FreeConsultationText>
-                        <FreeConsultationPointer alt={'pointerWhite'} src={pointer}/>
-                    </FreeConsultationButton>
-                    <Count>
-                        <Counter>
+                        </SC.FreeConsultationText>
+                        <SC.FreeConsultationPointer alt={'pointerWhite'} src={pointer}/>
+                    </SC.FreeConsultationButton>
+                    <SC.Count>
+                        <SC.Counter>
                             <CurrencyConverter/>%
-                        </Counter>
-                        <TextCount>
+                        </SC.Counter>
+                        <SC.TextCount>
                             увеличение личной <br/> продуктивности
-                        </TextCount>
-                    </Count>
-                </ButtonContentWrapper>
-            </ButtonContainer>
-            <CountContainerAdaptive>
-                <CountAdaptive>
-                    <Counter>{result}+</Counter>
-                    <TextCount>техники</TextCount>
-                </CountAdaptive>
-                <CountAdaptive>
-                    <Counter>
+                        </SC.TextCount>
+                    </SC.Count>
+                </SC.ButtonContentWrapper>
+            </SC.ButtonContainer>
+            <SC.CountContainerAdaptive>
+                <SC.CountAdaptive>
+                    <SC.Counter>{result}+</SC.Counter>
+                    <SC.TextCount>техники</SC.TextCount>
+                </SC.CountAdaptive>
+                <SC.CountAdaptive>
+                    <SC.Counter>
                         <CurrencyConverter/>%
-                    </Counter>
-                    <TextCount>продуктивности</TextCount>
-                </CountAdaptive>
-            </CountContainerAdaptive>
-        </ContentContainer>
+                    </SC.Counter>
+                    <SC.TextCount>продуктивности</SC.TextCount>
+                </SC.CountAdaptive>
+            </SC.CountContainerAdaptive>
+        </SC.ContentContainer>
     )
 }
 

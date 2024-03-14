@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-
 import {font} from '../common'
 
 export const ContentContainer = styled.div`
@@ -19,9 +18,7 @@ export const Title = styled.h1`
     display: flex;
     flex-wrap: wrap;
     width: 49%;
-    ${font({Fmax: 65, Fmin: 25, weight: 600})}
-    line-height: 135.3%;
-    letter-spacing: 0;
+    ${font({Fmax: 65, Fmin: 25, weight: 600, lineHeight: 1.353})}
     text-align: left;
     text-transform: uppercase;
 `
@@ -29,12 +26,10 @@ export const Text = styled.p`
     display: flex;
     flex-wrap: wrap;
     width: 49%;
-    ${font({Fmax: 16, Fmin: 8, weight: 400})};
+    ${font({Fmax: 16, Fmin: 8, weight: 400, lineHeight: 1.5})};
     padding-left: 1.5rem;
     border-left: 1px solid var(--color-light-100);
     color: var(--color-dark-100);
-    line-height: 150%;
-    letter-spacing: 0;
     text-align: left;
     @media (max-width: 910px) {
         span:first-letter {
@@ -195,17 +190,15 @@ export const CountAdaptive = styled.div`
     }
 `
 export const Counter = styled.span`
-    ${font({Fmax: 40, Fmin: 16, weight: 600})}
+    ${font({Fmax: 40, Fmin: 16, weight: 600, lineHeight: 1.413})}
     width: fit-content;
     font-family: Montserrat, sans-serif;
-    line-height: 141.3%;
     text-align: left;
     text-transform: uppercase;
     display: flex;
 `
 export const TextCount = styled.span`
     color: var(--color-dark-100);
-    ${font({Fmax: 16, Fmin: 10})}
-    line-height: 122.8%;
+    ${font({Fmax: 16, Fmin: 10, lineHeight: 1.228})}
     text-transform: lowercase;
 `

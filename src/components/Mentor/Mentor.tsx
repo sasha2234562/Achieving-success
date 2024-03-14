@@ -1,8 +1,8 @@
 import m from '@/assets/images/mentor.png'
-import { MentorImg } from '@/components/Mentor/Mentor.style'
+import * as SC from '@/components/Mentor/Mentor.style'
 
 const Mentor = () => {
-  return <MentorImg alt={'mentor'} src={m} />
+    return <SC.MentorImg alt={'mentor'} src={m}/>
 }
 
 export default Mentor

@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react'
-import {Result} from "@/components/CurrencyConverter/CurrencyConverter.style";
+import * as SC from "@/components/CurrencyConverter/CurrencyConverter.style";
 
 const CurrencyConverter = () => {
     const [convertedValue, setConvertedValue] = useState<null | number>(null)
@@ -21,7 +21,7 @@ const CurrencyConverter = () => {
         fetchExchangeRate()
     }, [])
 
-    return <>{convertedValue !== null && <Result>{convertedValue}</Result>}</>
+    return <>{convertedValue !== null && <SC.Result>{convertedValue}</SC.Result>}</>
 }
 
 export default CurrencyConverter

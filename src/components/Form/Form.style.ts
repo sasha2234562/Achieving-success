@@ -1,9 +1,6 @@
 import {font} from '@/components/common'
 import styled from 'styled-components'
-
-interface OpenWindowStyle {
-    openWindow: boolean
-}
+import {OpenWindowStyle} from "@/components/Form/Form.type";
 
 export const FormContainer = styled.div<OpenWindowStyle>`
     height: 100%;
@@ -40,8 +37,7 @@ export const FormStyle = styled.form`
     padding: 0 4.6875rem 0 3.5625rem;
 `
 export const FormTitle = styled.h2`
-    ${font({Fmax: 50, Fmin: 20, weight: 600})}
-    line-height: 148.8%;
+    ${font({Fmax: 50, Fmin: 20, weight: 600, lineHeight: 1.49})}
     text-align: left;
 `
 export const Input = styled.input`
@@ -71,7 +67,7 @@ export const Checkbox = styled.input`
     width: 1.875rem;
     height: 1.875rem;
     box-sizing: border-box;
-    border: 1px solid rgb(255, 255, 255);
+    border: 1px solid var(--color-light-100);
     position: absolute;
     z-index: -1;
     pointer-events: none;
@@ -93,7 +89,7 @@ export const CheckboxContainer = styled.div`
         width: 30px;
         height: 30px;
         box-sizing: border-box;
-        border: 0.71px solid rgb(255, 255, 255);
+        border: 0.71px solid var(--color-light-100);
         opacity: 0.7;
 
         position: relative;
@@ -108,7 +104,7 @@ export const CheckboxContainer = styled.div`
         width: 18px;
         height: 18px;
         box-sizing: border-box;
-        border: 0.71px solid rgb(255, 255, 255);
+        border: 0.71px solid var(--color-light-100);
         opacity: 0.7;
 
         border-top: none;
