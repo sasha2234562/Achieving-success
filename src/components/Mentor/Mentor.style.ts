@@ -13,4 +13,8 @@ export const MentorImg = styled.img`
         right: -10rem;
         min-height: 432px;
     }
+    @media (max-width: 400px) {
+        right: -8.2rem;
+        height: 72%;
+    }
 `

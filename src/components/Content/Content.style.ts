@@ -167,7 +167,6 @@ export const Count = styled.div`
     gap: 1.75rem;
     border-left: 1px solid var(--color-light-100);
     padding-left: 1.5rem;
-    z-index: 99999;
     @media (max-width: 1770px) {
         display: none;
     }
