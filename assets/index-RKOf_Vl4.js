@@ -455,6 +455,10 @@ font-size: calc( (100vw - 360px)/(1920 - 360) * (${e} - ${t}) + ${t}px);
         right: -10rem;
         min-height: 432px;
     }
+    @media (max-width: 400px) {
+        right: -8.2rem;
+        height: 72%;
+    }
 `,Kw=()=>k.jsx(Gw,{alt:"mentor",src:Qw});function Yw(){const[e,t]=O.useState(!1),n=()=>t(!1),r=()=>{t(!0)};return k.jsxs(Vm,{children:[k.jsxs(Hm,{children:[k.jsx(Ww,{}),k.jsx(t1,{open:r})]}),k.jsx(Kw,{}),k.jsx(Rw,{exit:n,openWindow:e})]})}var Cu={},lp={exports:{}},Xe={},up={exports:{}},ap={};/**
  * @license React
  * scheduler.production.min.js
