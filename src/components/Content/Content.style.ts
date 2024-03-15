@@ -19,8 +19,10 @@ export const Title = styled.h1`
     flex-wrap: wrap;
     width: 49%;
     ${font({Fmax: 65, Fmin: 25, weight: 600, lineHeight: 1.353})}
-    text-align: left;
     text-transform: uppercase;
+    @media (max-width: 500px) {
+        width: 89%;
+    }
 `
 export const Text = styled.p`
     display: flex;
@@ -30,7 +32,6 @@ export const Text = styled.p`
     padding-left: 1.5rem;
     border-left: 1px solid var(--color-light-100);
     color: var(--color-dark-100);
-    text-align: left;
     @media (max-width: 910px) {
         span:first-letter {
             text-transform: capitalize;
@@ -65,7 +66,7 @@ export const SignUpContainer = styled.button`
 `
 export const SignUpText = styled.span`
     background: var(--color-light-100);
-    padding: 1.5rem 1.75rem 1.5rem 1.5rem;
+    padding: 1.44rem 1.75rem 1.5rem 1.5rem;
     color: var(--color-info-500);
     border: 1px solid var(--color-light-100);
     font-size: 18px;
@@ -77,6 +78,7 @@ export const SignUpText = styled.span`
         padding: 10px 22px 11px 20px;
     }
     @media (max-width: 530px) {
+        padding: 10px 26px 11px 24px;
         span {
             display: none;
         }
@@ -90,10 +92,6 @@ export const SignUpPointer = styled.img`
     @media (max-width: 1000px) {
         padding: 17px 6px 6px 14px;
         width: 15px;
-    }
-    @media (max-width: 530px) {
-        font-size: 10px;
-        padding: 17px 6px 6px 14px;
     }
     @media (max-width: 320px) {
         padding: 16px 6px 6px 14px;
@@ -111,12 +109,11 @@ export const FreeConsultationText = styled.span`
     border: 1px solid var(--color-light-100);
     padding: 1.5rem;
     color: var(--color-light-100);
-    line-height: 122.8%;
     letter-spacing: 0;
     text-align: left;
     font-size: 18px;
     font-weight: 600;
-    line-height: 122.8%;
+    line-height: 1.23;
 
     :nth-child(2) {
         display: none;
@@ -130,7 +127,7 @@ export const FreeConsultationText = styled.span`
         padding: 10px 22px 10px 20px;
     }
     @media (max-width: 530px) {
-        padding: 10px 10px;
+        padding: 10px;
         :first-child {
             display: none;
         }
@@ -172,8 +169,11 @@ export const CountContainerAdaptive = styled.div`
     @media (max-width: 1770px) {
         display: flex;
         width: max-content;
-        margin-top: 70px;
+        margin-top: 4.375rem;
         margin-bottom: 3rem;
+    }
+    @media (max-width: 500px) {
+        gap: 3rem
     }
 `
 export const CountAdaptive = styled.div`
@@ -188,14 +188,17 @@ export const CountAdaptive = styled.div`
         display: flex;
         gap: 0.5rem;
     }
+    @media (max-width: 500px) {
+        padding-left: 0.5rem;
+    }
 `
 export const Counter = styled.span`
     ${font({Fmax: 40, Fmin: 16, weight: 600, lineHeight: 1.413})}
     width: fit-content;
     font-family: Montserrat, sans-serif;
-    text-align: left;
     text-transform: uppercase;
     display: flex;
+    align-items: center;
 `
 export const TextCount = styled.span`
     color: var(--color-dark-100);

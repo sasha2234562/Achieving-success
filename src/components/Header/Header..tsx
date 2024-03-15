@@ -13,12 +13,12 @@ const Header = () => {
                     <SC.Line/>
                 </SC.LogoContainer>
                 <SC.Links>
-                    <span>Обо мне</span>
-                    <span>Наставничество</span>
-                    <span>Мероприятия</span>
-                    <span>Кейсы</span>
-                    <span>Отзывы</span>
-                    <span>Контакты</span>
+                    <SC.Link>Обо мне</SC.Link>
+                    <SC.Link>Наставничество</SC.Link>
+                    <SC.Link>Мероприятия</SC.Link>
+                    <SC.Link>Кейсы</SC.Link>
+                    <SC.Link>Отзывы</SC.Link>
+                    <SC.Link>Контакты</SC.Link>
                 </SC.Links>
                 <SC.Phone>
                     <SC.PhoneImage alt={'phone'} src={phone}/>

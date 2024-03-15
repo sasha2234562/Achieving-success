@@ -10,7 +10,7 @@ export const HeaderContainer = styled.header`
     align-items: center;
     flex-wrap: wrap;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 814px) {
         width: 90%;
         display: none;
     }
@@ -18,6 +18,10 @@ export const HeaderContainer = styled.header`
 export const Links = styled.div`
     display: flex;
     gap: 1.875rem;
+`
+export const Link = styled.span`
+    font-family: Montserrat, sans-serif;
+    ${font({Fmax: 14, Fmin: 8, weight: 400, lineHeight: 1.23})}
 `
 export const Phone = styled.div`
     display: flex;
@@ -33,11 +37,9 @@ export const PhoneImage = styled.img`
 `
 export const PhoneNumber = styled.span`
     font-family: Montserrat, sans-serif;
-    ${font({Fmax: 18, Fmin: 14, weight: 600})}
-    line-height: 122.8%;
+    ${font({Fmax: 18, Fmin: 14, weight: 600, lineHeight: 1.23})}
     letter-spacing: 2px;
-    text-align: left;
-    height: 18px;
+    height: 1.125rem;
 `
 export const LogoContainer = styled.div`
     display: flex;
@@ -55,7 +57,7 @@ export const HeaderAdaptive = styled.div`
     margin: 1rem;
     align-items: center;
     justify-content: space-between;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 814px) {
         display: flex;
     }
 `
@@ -64,11 +66,11 @@ export const Menu = styled.div`
     align-items: center;
     cursor: pointer;
     margin: 1rem;
-    gap: 10px;
+    gap: 0.625rem;
 `
 export const BurgerIconContainer = styled.span`
-    max-width: 40px;
+    max-width: 2.5rem;
     border: 1px solid var(--color-light-100);
     border-radius: 50%;
-    padding: 11px 10px 3px 10px;
+    padding: 0.688rem 0.625rem 0.188rem 0.625rem;
 `

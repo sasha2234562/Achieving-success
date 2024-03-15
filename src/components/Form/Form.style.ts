@@ -38,7 +38,6 @@ export const FormStyle = styled.form`
 `
 export const FormTitle = styled.h2`
     ${font({Fmax: 50, Fmin: 20, weight: 600, lineHeight: 1.49})}
-    text-align: left;
 `
 export const Input = styled.input`
     background-color: transparent;
@@ -47,11 +46,8 @@ export const Input = styled.input`
     padding: 0 0 11px 2px;
     color: var(--color-light-700);
     font-family: Montserrat, sans-serif;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 122.8%;
-    text-align: left;
 
+    ${font({Fmax: 20, Fmin: 12, weight: 400, lineHeight: 1.23})}
     &:focus,
     &:focus-visible {
         outline: none;
@@ -64,8 +60,8 @@ export const InputContainer = styled.div`
     gap: 4.0625rem;
 `
 export const Checkbox = styled.input`
-    width: 1.875rem;
-    height: 1.875rem;
+    width: 30px;
+    height: 30px;
     box-sizing: border-box;
     border: 1px solid var(--color-light-100);
     position: absolute;
@@ -86,14 +82,13 @@ export const CheckboxContainer = styled.div`
     gap: 1.5rem;
 
     .container-checkbox__icon {
-        width: 30px;
-        height: 30px;
+        width: 1.875rem;
+        height: 1.875rem;
         box-sizing: border-box;
-        border: 0.71px solid var(--color-light-100);
+        border: 1px solid var(--color-light-100);
         opacity: 0.7;
-
         position: relative;
-        margin-right: 16px;
+        margin-right: 1rem;
     }
 
     .container-checkbox__icon::after {
@@ -101,10 +96,10 @@ export const CheckboxContainer = styled.div`
         position: absolute;
         top: 50%;
         left: 36%;
-        width: 18px;
-        height: 18px;
+        width: 1.125rem;
+        height: 1.125rem;
         box-sizing: border-box;
-        border: 0.71px solid var(--color-light-100);
+        border: 1px solid var(--color-light-100);
         opacity: 0.7;
 
         border-top: none;
@@ -121,7 +116,7 @@ export const CheckboxContainer = styled.div`
     }
 `
 export const WrapperCheckbox = styled.label`
-    margin-top: 30px;
+    margin-top: 1.875rem;
     position: relative;
     display: flex;
     align-items: center;
@@ -139,18 +134,16 @@ export const Error = styled.p`
     position: absolute;
     color: red;
     bottom: -1.5rem;
+    ${font({Fmax: 16, Fmin: 12, weight: 400, lineHeight: 1.29})}
 `
 export const Feedback = styled.p`
-    font-size: 40px;
-    font-weight: 600;
-    line-height: 145%;
-    text-align: center;
+    ${font({Fmax: 50, Fmin: 20, weight: 600, lineHeight: 1.45, textAlign: 'center'})}
 `
 export const FormResult = styled.div`
     align-items: center;
     display: flex;
     flex-direction: column;
-    gap: 98px;
+    gap: 6.125rem;
     justify-content: center;
     margin: auto;
 `

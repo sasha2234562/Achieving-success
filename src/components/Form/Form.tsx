@@ -10,14 +10,14 @@ const Form: FC<FormProps> = ({exit, openWindow}) => {
     const [formResult, setFormResult] = useState(false)
     const formik = useFormik({
         initialValues: {
-            chacked: false,
+            checked: false,
             name: '',
             phone: '',
         },
         onSubmit: value => {
             localStorage.setItem('name', value.name)
             localStorage.setItem('phone', value.phone)
-            localStorage.setItem('chacked', `${value.chacked}`)
+            localStorage.setItem('checked', `${value.checked}`)
             setFormResult(true)
         },
         validate: value => {
@@ -64,11 +64,11 @@ const Form: FC<FormProps> = ({exit, openWindow}) => {
                                 <SC.Checkbox
                                     className={'container-checkbox__input'}
                                     type={'checkbox'}
-                                    {...formik.getFieldProps('chacked')}
+                                    {...formik.getFieldProps('checked')}
                                 />
                                 <span className={'container-checkbox__icon'}></span>
                                 <SC.CheckboxLabel>
-                                    Согласен на сохранение и обработку персональных данных
+                                    Согласен на сохранение и обработку <br/> персональных данных
                                 </SC.CheckboxLabel>
                             </SC.WrapperCheckbox>
                         </SC.CheckboxContainer>
